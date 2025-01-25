@@ -1,0 +1,35 @@
+1.Download and install XAMPP from apachefriends.org.
+Start Apache and MySQL in the XAMPP Control Panel.
+
+
+2.Set Up Project
+Copy the project folder to:
+C:\xampp\htdocs\Appointment_Management_System
+
+
+3.Database Setup
+http://localhost/phpmyadmin
+
+
+4.Create a database named: mentormeet.
+Import the provided .sql file into this database.
+
+
+4.Open http://localhost/Appointment_Management_System/ in your browser.
+
+
+5.Login Credentials
+Admin Login:
+Email: admin@mentormeet.com
+Password: 12345
+
+Faculty Login:
+Email: mahadi@gmail.com
+Password: cse2291
+
+Student Login:
+Emails:
+student@mentormeet.com
+sohelrana@gmail.com
+mohaimin@gmail.com
+Password: 123

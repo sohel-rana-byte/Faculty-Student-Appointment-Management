@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animations.css">  
+    <link rel="stylesheet" href="css/main.css">  
+    <link rel="stylesheet" href="css/index.css">
+    <title>Mentormeet</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef3f9;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #005bb5;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .header .logo-sub {
+            font-size: 16px;
+            color: #cce7ff;
+        }
+
+        .header .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        .header .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 80px 20px;
+            background-image: url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content .heading-text {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .main-content .sub-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-content .btn-primary {
+            background-color: #005bb5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .main-content .btn-primary:hover {
+            background-color: #00448f;
+            transform: translateY(-5px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 14px;
+            color: #888;
+            background-color: #005bb5;
+            color: #fff;
+        }
+
+        /* Add animations for the text */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .testimonial {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .testimonial div {
+            max-width: 300px;
+            margin: 0 20px;
+        }
+
+        .testimonial p {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .testimonial span {
+            font-size: 16px;
+            color: #005bb5;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            Mentormeet | <span class="logo-sub">MentorChannel Platform</span>
+        </div>
+        <nav class="nav-links">
+            <a href="login.php">LOGIN</a>
+            <a href="signup.php">REGISTER</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <strong><p class="heading-text" id="greeting">Welcome to Mentormeet</p></strong>
+        <p class="sub-text">
+            Need to connect with your professor or mentor? Time is precious!<br>
+            Don’t worry, book appointments effortlessly with Mentormeet.<br>
+            We bring you a seamless faculty-student scheduling platform.<br>
+            Stay organized, stay on track!
+        </p>
+        <a href="login.php">
+            <button class="btn-primary">Make an Appointment</button>
+        </a>
+    </div>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <div>
+            <p><strong>"Mentormeet has made it so easy to connect with my professors, no more hassle!"</p>
+            <span>- Jerry, Student</strong></span>
+        </div>
+        <div>
+            <p><strong>"As a mentor, I can manage my schedule efficiently. This platform is a game-changer!"</p>
+            <span>- Sanjida Akter, Lecturer</strong></span>
+        </div>
+    </section>
+
+    <footer class="footer">
+        A Web Solution by Team Backbenchers, guided by <strong>Md Mahadi Hasan</strong>
+    </footer>
+
+    <script>
+        // Change greeting based on local time
+        const greetingElement = document.getElementById('greeting');
+        const currentHour = new Date().getHours();
+        if (currentHour < 12) {
+            greetingElement.innerText = "Good Morning! Welcome to Mentormeet";
+        } else if (currentHour < 18) {
+            greetingElement.innerText = "Good Afternoon! Welcome to Mentormeet";
+        } else {
+            greetingElement.innerText = "Good Evening! Welcome to Mentormeet";
+        }
+    </script>
+
+</body>
+</html>
